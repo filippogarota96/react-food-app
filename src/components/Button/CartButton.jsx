@@ -1,12 +1,12 @@
 import styles from "./header_cart_button.module.css"
 import CartIcon from "../UI/CartIcon";
-import Cart from "../Cart/Cart";
+import Cart from "../Cart/CartItem";
 import { Modal } from "../UI/Modal/Modal";
 import { createPortal } from "react-dom";
 import { useState } from "react";
 
 const CartButton = () => {
-    
+
     const [modal, setModal] = useState(false);
 
     const showModal = () => setModal(true);
@@ -19,14 +19,11 @@ const CartButton = () => {
                 </div>
                 <span>Your Cart</span>
                 <div className={styles.badge}>0</div>
-                
             </div>
-           { modal == true ? createPortal(
-                <Modal >
-                    <Cart />
-                </Modal>,
+            {modal == true ? createPortal(
+                <Modal />,
                 document.body
-           ) : ""}
+            ) : ""}
         </div>
     )
 }
