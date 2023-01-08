@@ -1,0 +1,25 @@
+.jumbotron {
+    width: 50%;
+    height: 200px;
+    background-color: #323132;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1%;
+}
+
+.jumbotron h3 {
+    color: #ffff;
+}
+
+.jumbotron p {
+    color: #7B7A7B;
+}
+
+.card_cnt {
+    width: 80%;
+    margin: 150px auto;
+}
