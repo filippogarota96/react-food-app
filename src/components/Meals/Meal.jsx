@@ -5,11 +5,11 @@ const Meal = (props) => {
     return (
         <div className={styles.meal}>
             <div>
-                <h3>{props.item.name}</h3>
-                <p className={styles.description}>{props.item.description}</p>
-                <span className={styles.price}>{props.item.price}$</span>
+                <h3>{props.name}</h3>
+                <p className={styles.description}>{props.description}</p>
+                <span className={styles.price}>{props.price}$</span>
             </div>
-            <MealForm id={props.item.id} />
+            <MealForm id={props.id} />
         </div>
     )
 }

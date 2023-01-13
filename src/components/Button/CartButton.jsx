@@ -5,25 +5,16 @@ import { Modal } from "../UI/Modal/Modal";
 import { createPortal } from "react-dom";
 import { useState } from "react";
 
-const CartButton = () => {
-
-    const [modal, setModal] = useState(false);
-
-    const showModal = () => setModal(true);
-
+const CartButton = (props) => {
     return (
         <div>
-            <div className={styles.button} onClick={showModal}>
+            <div className={styles.button} onClick={props.onClick}>
                 <div className={styles.icon}>
                     <CartIcon />
                 </div>
                 <span>Your Cart</span>
-                <div className={styles.badge}>0</div>
+                <div className={styles.badge}>2</div>
             </div>
-            {modal == true ? createPortal(
-                <Modal />,
-                document.body
-            ) : ""}
         </div>
     )
 }

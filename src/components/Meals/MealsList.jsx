@@ -4,15 +4,21 @@ import DUMMY_MEALS from "../../Database/dummyMeals";
 import Meal from "./Meal";
 
 const MealsList = () => {
-    
+
     const mealList = DUMMY_MEALS.map(meal => (
-        <Meal item={meal} key={meal.id}  /> 
+        <Meal
+            id={meal.id}
+            key={meal.id}
+            name={meal.name}
+            description={meal.description}
+            price={meal.price}
+        />
     ));
 
     return (
         <Card>
             {mealList}
-        </Card>   
+        </Card>
     )
 
 }
