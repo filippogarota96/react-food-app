@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import Header from "./components/Header/Header";
 import MealsList from './components/Meals/MealsList';
-import { Cart } from './components/Cart/Cart';
+import Cart from './components/Cart/Cart';
 import './App.css'
+import CartProvider from './store/CartProvider';
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
   }
 
   return (
-    <>
+    <CartProvider>
       {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
       <div className="jumbotron">
@@ -35,7 +35,7 @@ function App() {
       <div className='card_cnt'>
         <MealsList />
       </div>
-    </>
+    </CartProvider>
 
   )
 }
